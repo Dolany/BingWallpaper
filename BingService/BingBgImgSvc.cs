@@ -10,7 +10,7 @@ namespace BingService
             var requestor = new HttpRequester();
             var html = requestor.Request("https://cn.bing.com");
             var strs = html.Split("background-image");
-            var strs2 = strs[2].Split(";");
+            var strs2 = strs[6].Split(";");
             var strs3 = strs2[0].Split(new[] {"(", ")"}, StringSplitOptions.RemoveEmptyEntries);
             var url = strs3[1];
             var fullPath = "https://cn.bing.com" + url;
